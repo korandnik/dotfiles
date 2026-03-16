@@ -7,6 +7,8 @@ directly inside `/home/<username>`, otherwise use --target & --dir options
 - zsh 
 - nvim
 - hyprland/hyprpaper/hypridle (+nwg-displays generated file)
+- mpv
+- yt-dlp
 
 ## installation
 run `stow <package_name>`
