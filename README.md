@@ -1,6 +1,7 @@
 # korandnik's dotfiles
 
 ## configured packages/programmes
+- zsh 
 - nvim
 
 ## installation
