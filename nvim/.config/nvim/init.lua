@@ -7,6 +7,7 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.swapfile = false
 
+
 vim.cmd("colorscheme retrobox")
 
 vim.pack.add({
@@ -30,6 +31,7 @@ vim.pack.add({
     { src = "https://github.com/hrsh7th/cmp-vsnip" },
     { src = "https://github.com/hrsh7th/vim-vsnip" },
     { src = "https://github.com/petertriho/cmp-git" },
+    { src = "https://github.com/nathangrigg/vim-beancount" }
 })
 
 require "mini.icons".setup()
