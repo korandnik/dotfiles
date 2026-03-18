@@ -76,11 +76,19 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+if command -v apt >/dev/null 2>&1; then # ubuntu
+    source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 
+    source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+if command -v pacman >/dev/null 2>&1; then
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # Enable zsh-syntax-highlighting (must be last!)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
 # User configuration
 
