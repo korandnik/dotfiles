@@ -182,6 +182,12 @@ vim.keymap.set('n', '<Leader>s', function()
     vim.cmd.write()
 end
 )
+
+vim.keymap.set('n', '<Leader>n', ':tabnew<CR>')
+vim.keymap.set('n', '<Leader>w', ':tabclose<CR>')
+vim.keymap.set('n', '<Leader>t', ':terminal<CR>i')
+vim.keymap.set('t', '<Leader>q', '<C-d><CR>')
+
 vim.keymap.set({ 'n', 'v', 'x' }, '<leader>y', '"+y<CR>')
 vim.keymap.set({ 'n', 'v', 'x' }, '<leader>d', '"+d<CR>')
 
