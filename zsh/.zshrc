@@ -131,3 +131,5 @@ alias cal="cal -m3"
 alias wu="wg-quick up wg0"
 alias wd="wg-quick down wg0"
 alias mkdir="mkdir -p"
+
+fastfetch
