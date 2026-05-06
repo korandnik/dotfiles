@@ -67,7 +67,7 @@ require "alpha".setup(
 
 
 
-vim.lsp.enable({ "lua_ls", "ruff", "tinymist", "clangd" })
+vim.lsp.enable({ "lua_ls", "ty", "tinymist", "clangd" })
 vim.lsp.config("lua_ls",
     {
         settings = {
@@ -141,7 +141,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 vim.lsp.config("tinymist", {
     capabilities = capabilities,
 })
-vim.lsp.config("ruff", {
+vim.lsp.config("ty", {
     capabilities = capabilities,
 })
 vim.lsp.config("lus_ls", {
