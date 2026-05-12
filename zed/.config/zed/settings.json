@@ -1,0 +1,71 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "agent": {
+    "default_model": {
+      "provider": "lmstudio",
+      "model": "qwen/qwen2.5-coder-14b",
+      "enable_thinking": false,
+    },
+    "favorite_models": [
+      {
+        "provider": "lmstudio",
+        "model": "qwen/qwen2.5-coder-14b",
+        "enable_thinking": false,
+      },
+    ],
+    "model_parameters": [],
+  },
+  "git_panel": {
+    "tree_view": false,
+  },
+  "terminal": {
+    "font_family": "Iosevka Nerd Font Mono",
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "vim_mode": true,
+  "icon_theme": "Zed (Default)",
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "Gruvbox Light",
+    "dark": "Gruvbox Dark",
+  },
+  "languages": {
+    "Python": { "language_servers": ["ty", "!basedpyright"] },
+    "Lua": { "language_servers": ["lua-language-server"] },
+  },
+  "lsp": {
+    "lua-language-server": {
+      "settings": {
+        "Lua": {
+          "diagnostics": {
+            "globals": ["hl"],
+          },
+          "workspace": {
+            "library": [
+              "~/.config/nvim",
+              "~/.local/share/nvim/site",
+              "/usr/share/nvim/runtime",
+              "/usr/share/hypr/stubs",
+            ],
+          },
+        },
+      },
+    },
+  },
+}
