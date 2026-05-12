@@ -124,7 +124,7 @@ hl.config({
 })
 
 hl.bind("SUPER + RETURN", hl.dsp.exec_cmd("kitty"))
-hl.bind("SUPER + Q", hl.dsp.window.kill("activewindow"))
+hl.bind("SUPER + Q", hl.dsp.window.close("activewindow"))
 hl.bind("SUPER + SHIFT + Q", hl.dsp.exec_cmd("wleave"))
 hl.bind("SUPER + M", hl.dsp.exit())
 
@@ -195,3 +195,26 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"))
 
 hl.bind("CONTROL + SHIFT_L", hl.dsp.exec_cmd("hyprctl switchxkblayout all next"))
 hl.bind("SUPER + B", hl.dsp.exec_cmd("killall -SIGUSR1 waybar"))
+
+
+hl.window_rule({
+    name = "telegram-workspace",
+    match = {
+        initial_class = "org.telegram.desktop"
+    },
+    workspace = 1
+})
+hl.window_rule({
+    name = "browser-workspace",
+    match = {
+        initial_class = "firefox"
+    },
+    workspace = 2
+})
+hl.window_rule({
+    name = "editor-workspace",
+    match = {
+        initial_class = "dev.zed.Zed",
+    },
+    workspace = 3
+})
