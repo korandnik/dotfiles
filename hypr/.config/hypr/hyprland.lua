@@ -107,7 +107,7 @@ hl.config({
         kb_layout     = "us,ru",
         kb_variant    = "",
         kb_model      = "",
-        kb_options    = "grp:lctrl_lshift_toggle",
+        kb_options    = "",
         kb_rules      = "",
 
         repeat_rate   = 40,
@@ -192,3 +192,6 @@ hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"))
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"))
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"))
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"))
+
+hl.bind("CONTROL + SHIFT_L", hl.dsp.exec_cmd("hyprctl switchxkblayout all next"))
+hl.bind("SUPER + B", hl.dsp.exec_cmd("killall -SIGUSR1 waybar"))
