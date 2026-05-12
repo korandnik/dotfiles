@@ -15,6 +15,7 @@
     "hyprland/workspaces#rw"
   ],
   "modules-right": [
+    "tray",
     "network",
     "network#2",
     "hyprland/language",
@@ -256,7 +257,7 @@
       "title<virtualbox>": "💽 ",
       "class<remmina>": "🖥️ ",
       "class<VSCode|code-url-handler|code-oss|codium|codium-url-handler|VSCodium>": "󰨞 ",
-      "class<dev.zed.Zed>": "󰵁",
+      "class<dev.zed.Zed>": "󰵁 ",
       "class<codeblocks>": "󰅩 ",
       "title<.*github.*>": " ",
       "class<mousepad>": " ",
