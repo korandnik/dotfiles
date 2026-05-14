@@ -40,7 +40,7 @@ window#waybar {
   font-family: "IosevkaMono Nerd Font", monospace;
   font-weight: bold;
   font-size: 14px;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 /* ======================================================== */
