@@ -1,9 +1,4 @@
-hl.monitor({
-    output = "eDP-1",
-    mode = "2520x1680@90.0",
-    position = "0x0",
-    scale = "1.5"
-})
+require("monitors")
 
 hl.on("hyprland.start", function()
     hl.exec_cmd("waybar")
