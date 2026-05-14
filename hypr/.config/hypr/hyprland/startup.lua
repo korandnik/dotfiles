@@ -1,0 +1,6 @@
+hl.on("hyprland.start", function()
+    hl.exec_cmd("waybar")
+    hl.exec_cmd("hyprpaper")
+    hl.exec_cmd("sleep 0.5 && /home/korandnik/.config/hypr/bin/hyprpaper.sh")
+    hl.exec_cmd("hypridle")
+end)

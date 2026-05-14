@@ -72,8 +72,16 @@ vim.lsp.config("lua_ls",
     {
         settings = {
             Lua = {
+                diagnostics = {
+                    globals = {"hl"}
+                },
                 workspace = {
-                    library = vim.api.nvim_get_runtime_file("", true)
+                    library = {
+                        "~/.config/nvim",
+                        "~/.local/share/nvim/site",
+                        "/usr/share/nvim/runtime",
+                        "/usr/share/hypr/stubs"
+                    }
                 }
             }
         }
