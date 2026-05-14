@@ -1,4 +1,4 @@
-STOW_TARGETS = dunst hypr mpv nvim waybar yt-dlp zed zsh
+STOW_TARGETS = dunst hypr mpv nvim waybar wleave yt-dlp zed zsh 
 
 GREEN := \033[0;32m
 RED := \033[0;31m
