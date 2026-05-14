@@ -2,13 +2,19 @@
 # EXPORTS #
 ###########
 # bins
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-export PATH=$HOME/.cargo/bin:$PATH
+typeset -U PATH 
+path=(
+    $HOME/bin
+    $HOME/.local/bin
+    $HOME/.cargo/bin
+    /usr/local/bin
+    $path
+)
 # vars
 export EDITOR='nvim'
+export HISTFILE=$HOME/.zsh_history
 export HISTSIZE=1000000
 export SAVEHIST=1000000
-export FZF_HISTORY_FILE="$HOME/.zsh_history"
 
 ###########
 # PLUGINS #
@@ -19,6 +25,13 @@ source $HOME/.zsh/zsh-git-prompt/zshrc.sh
 source $HOME/.zsh/colored-man-pages/colored-man-pages.plugin.zsh
 # fzf
 source <(fzf --zsh)
+# 
+eval "$(zoxide init zsh)"
+alias cd="z"
+
+# stock
+autoload -Uz compinit
+compinit -u
 
 # managers
 if command -v apt >/dev/null 2>&1; then # ubuntu
@@ -35,11 +48,10 @@ if command -v pacman >/dev/null 2>&1; then #arch
     # Enable zsh-syntax-highlighting (must be last!)
     source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
-
 ###########
 # PROMPTS #
 ###########
-current_hostname=$(hostname)
+current_hostname=$(cat /etc/hostname)
 if [[ "$current_hostname" == "dslay" ]]; then
     host_color="red"
 elif [[ "$current_hostname" == "worker" ]]; then
@@ -64,6 +76,7 @@ alias cal="cal -m3"
 alias wu="wg-quick up wg0"
 alias wd="wg-quick down wg0"
 alias mkdir="mkdir -p"
+alias sudo="sudo "
 
 ##########
 # LAUNCH #
